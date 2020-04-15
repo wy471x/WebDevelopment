@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+  </head>
+  <body>
+    <p>This is my page</p>
+    <script>
+	function fetchAndDecode(url,type){
+           return fetch(url,{ method: 'GET',mode: 'cors'}).then(response => {
+                        if(type === 'blob'){
+                           return response.blob();
+			}else if(type === 'text'){
+                           return response.text();
+			}
+		})
+                .catch(e => {
+		  console.log('There has been a problem with your fetch operation: ' + e.message);
+		});
+	} 
+        let coffee = fetchAndDecode('coffee.jpg','blob');
+	let tea = fetchAndDecode('tea.jpg','blob');
+	let description = fetchAndDecode('description.txt','text');
+        Promise.all([coffee,tea,description]).then(values => {
+                  console.log(values);
+		  let objectURL1 = URL.createObjectURL(values[0]);
+		  let objectURL2 = URL.createObjectURL(values[1]);
+  		  let descText = values[2];
+
+    		  let image1 = document.createElement('img');
+		  let image2 = document.createElement('img');
+		  image1.src = objectURL1;
+		  image2.src = objectURL2;
+		  document.body.appendChild(image1);
+		  document.body.appendChild(image2);
+		  
+   		  let para  = document.createElement('p');
+		  para.textContent = descText;
+		  document.body.appendChild(para);	
+		});
+    </script>
+  </body>
+</html>

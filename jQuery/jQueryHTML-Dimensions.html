@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <style>
+    #div1 {
+	  height: 100px;
+	  width: 300px;
+	  padding: 10px;
+	  margin: 3px;
+	  border: 1px solid blue;
+	  background-color: lightblue;
+    }
+  </style>
+ </head>
+ <body>
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<div id="div3"></div>
+	<button>Click Me</button>
+  <script>
+	$(document).ready(function(){
+		/*height and width method
+		$("button").click(function(){
+			var txt = "";
+			txt += "Width: " + $("#div1").width() + "</br>";
+			txt += "Inner Width: " + $("#div1").innerWidth() + "</br>";
+			txt += "Inner Width: " + $("#div1").innerHeight();
+			$("#div1").html(txt);
+		});
+		*/
+		/* height and width method of document and window
+		$("button").click(function(){
+			var txt = "";
+			txt += "Document width/height: " + $(document).width()
+			 + "x" + $(document).height() + "\n";
+			txt += "Window width/height: " + $(window).width()
+				+ "x" + $(window).height();
+			$("#div1").html(txt);
+		});
+		*/
+		/* set width and height of element
+		*/
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("#div1").width(500).height(500);
+			});
+		});
+	});
+  </script>
+ </body>
+</html>

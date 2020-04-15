@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery Selectors</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<h2>Finding HTML Elements by Tag Name</h2>
+		
+		<p>Hello World!</p>
+		<p>Hello Sweden!</p>
+		<p>Hello Japan!</p>
+		
+		<p id="demo"></p>
+		
+		<script>
+			$(document).ready(function(){
+				var myElements = $("P");
+				$("#demo").text("The text in the first paragraph is: " +
+				myElements[1].innerHTML);
+			});
+		</script>
+	</body>
+</html>

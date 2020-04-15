@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	</head>
+	<body>
+		Name: <input type="text" name="fullname"><br>
+		Email: <input type="text" name="email">
+		<script>
+			$(document).ready(function(){
+				$("input").blur(function(){
+					$(this).css("background-color","#ffffff");
+				});
+			});
+		</script>
+		
+	</body>
+</html>

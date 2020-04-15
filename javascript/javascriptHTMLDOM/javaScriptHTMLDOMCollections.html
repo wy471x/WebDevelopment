@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript HTML DOM Collections</title>
+	</head>
+	<body>
+		<p id="p1" name="first">This first paragraph.</p>
+		<p id="p2" name="second">This second paragraph.</p>
+		<p id="p3" name="third">This third paragraph.</p>
+		<script>
+			var x = document.getElementsByTagName("p");
+			//alert(x["third"].textContent);
+			//alert(x["second"].textContent);
+			//alert(x["first"].textContent);
+			
+			//alert(x[2].textContent);
+			//alert(x[1].textContent);
+			//alert(x[0].textContent);
+	
+			alert(x["p3"].textContent);
+			alert(x["p2"].textContent);	
+			alert(x["p1"].textContent);
+			alert("elements: "+x.length);
+		</script>
+	</body>
+</html>

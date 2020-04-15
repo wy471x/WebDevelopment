@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ </head>
+ <body>
+  <button>jQuery onConflict method</button>
+  <p></p>
+  <script>
+    /*
+	$.noConflict();
+    jQuery(document).ready(function(){
+		jQuery("button").click(function(){
+			jQuery("p").text("jQuery is still working!");
+		});
+	});
+	*/
+	/*
+	var jq = $.noConflict();
+	jq(document).ready(function(){
+		jq("button").click(function(){
+			jq("p").text("jQuery is still working!");
+		});
+	});
+	*/
+	$.noConflict();
+	jQuery(document).ready(function($){
+		$("button").click(function(){
+			$("p").text("jQuery is still working!");
+		});
+	});
+  </script>
+ </body>
+</html>

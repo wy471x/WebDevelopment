@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<p id="id01">Hello China!</p>
+		<p id="id02">Hello Japan!</p>
+		<p id="id03">Hello America!</p>
+		<script>
+			$(document).ready(function(){
+				var myElement = $("#id01");
+				myElement.remove();
+				var myParent = myElement.parent();
+				alert(myParent);
+			});
+		</script>
+	</body>
+</html>

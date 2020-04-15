@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavScript HTML DOM Events</title>
+	</head>
+	<body onload="checkCookies()">
+		<h1 onclick="this.innerHTML = 'Ooops!'">Click on this text!</h1>
+		<p onclick="changeText(this)">Click on this text!</p>
+		<button onclick="displayDate()">Time is?</button><br>
+		<button id="myBtn1">Click Me</button>
+		<script>	
+			function changeText(id){
+			   id.innerHTML = "Ooops!";
+			}
+		        function displayDate(){
+			   document.getElementById("demo").innerHTML = Date();
+			}
+ 			document.getElementById("myBtn1").onclick = displayDate;
+			function checkCookies(){
+			   var text = "";
+			   if(navigator.cookieEnabled == true){
+			      text = "Cookies are enabled.";	
+			   }else{
+			      text = "Cookies are not enabled.";	
+			   }
+			   document.getElementById("demo1").innerHTML = text;
+			}
+			function myFunction(){
+			   var x = document.getElementById("fname");
+			   x.value = x.value.toUpperCase();
+			}
+		</script>
+		<p id="demo"></p>
+   		<p id="demo1"></p>
+		Enter your name:<input type="text" id="fname" onchange="myFunction()">
+		<p>
+		   When you leave the input field, a function is triggered which transforms the 
+		   input text to upper case.
+		</p>
+		<div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:#D94A38;width:120px;height		     :20px;padding:40px">
+		Mouse Over Me
+		</div>
+		<br>
+		<br>
+		<script>
+			function mOver(obj){
+			  obj.innerHTML = "Thank You";
+			}
+			function mOut(obj){
+			  obj.innerHTML = "Mouse Over Me";
+			}
+		</script>
+		<div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color:#D94A38;width:90px;height:20		 	px;padding:40px;">
+		Click Me
+		</div>
+		<script>
+		     function mDown(obj){
+			  obj.style.backgroundColor = "#1ec5e5";
+			  obj.innerHTML = "Release Me";
+		     }
+
+		    function mUp(obj) {
+  			  obj.style.backgroundColor="#D94A38";
+  			  obj.innerHTML="Thank You";
+		    } 
+		</script>
+	</body>
+</html>

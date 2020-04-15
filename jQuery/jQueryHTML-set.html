@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ </head>
+ <body>
+  <p>Hello jQuery!</p>
+  <script>
+    $(document).ready(function(){
+		$("p").append(" Some appended text.");
+		$("p").prepend("Some prepended text. ");
+	})
+  </script>
+ </body>
+</html>

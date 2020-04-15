@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="id01">My First Page  <a>welcome</a></p>
+<p id="id02"></p>
+<p>Hello World!</p>
+<div>
+	<p>The DOM is very useful!</p>
+	<p>This example demonstrates the <b>document.body</b> property.</p>
+</div>
+
+<script>
+     //document.getElementById("id02").innerHTML = document.getElementById("id01").innerHTML;
+     //document.getElementById("id02").innerHTML = document.getElementById("id01").firstChild.nodeValue;
+     //document.getElementById("id02").innerHTML = document.getElementById("id01").childNodes[1].childNodes[0].nodeValue;
+     //alert(document.body.innerHTML);
+     //alert(document.documentElement.innerHTML);
+     //document.getElementById("id02").innerHTML = document.getElementById("id01").nodeName;	
+     document.getElementById("id02").innerHTML = document.getElementById("id01").nodeValue;
+     document.getElementById("id02").innerHTML = document.getElementById("id01").nodeType;
+</script>
+
+</body>
+</html> 

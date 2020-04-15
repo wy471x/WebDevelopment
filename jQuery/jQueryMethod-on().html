@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<p id="id01">Hello jQuery!</p>
+		<p id="id02">on method</p>
+		<script>
+			$(document).ready(function(){
+				$("#id01").on({
+								"click": function(){ $(this).hide();}
+				});
+				$("#id02").on({
+								mouseenter: function(){ $(this).css("background-color","lightgray");},
+								mouseleave: function(){ $(this).css("background-color","lightblue");},
+								click: function(){ $(this).css("background-color","yellow");}
+							});
+			});
+		</script>
+	</body>
+</html>

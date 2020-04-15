@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>javaScript HTML DOM EventListener</title>
+		<style>
+		   #myDiv1,#myDiv2{
+		     	background-color:coral;
+			padding: 50px;
+		   }
+		   #myP1,#myP2{
+		        background-color: white;
+			font-size: 20px;
+			border: 1px solid;
+			padding: 20px;	
+		   }
+		   #myDiv{
+		    background-color: coral;
+		    border: 1px solid;
+		    padding: 50px;
+		    color: white;
+		    font-size: 20px;
+		   }
+		</style>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	</head>
+	<body>
+		<button id="myBtn">Display Time</button>
+		<p id="demo"></p>
+		<p id="demo1"></p>
+		
+		<h2>JavaScript addEventListener()</h2>
+		<div id="myDiv1">
+			<h2>Bubbling:<h2>
+			<p id="myP1">Click Me!</p>
+		</div><br>
+		
+		<div id="myDiv2">
+			<h2>Capturing:</h2>
+			<p id="myP2">Click Me!</p>
+		</div>
+
+                  <h2>JavaScript removeEventListener()</h2>
+		  <div  id="myDiv">
+			<p>
+			   This div element has an onmousemove event handler that displays a random number every
+			   time you move your mouse inside this orange field.
+			</p>
+			<p>
+			   Click the button to remove the div's event handler.</p>
+			<button onclick="removeHandler()" id="myBtn">Remove</button>
+		  </div>
+		  <p id="demo3"></p>
+		<script>
+			document.getElementById("myBtn").addEventListener("click",displayDate);
+			function displayDate(){
+			  //document.getElementById("demo").textContent= Date();
+			    document.getElementById("demo").innerHTML = Date();
+			}
+			window.addEventListener("resize",function(){ document.getElementById("demo1").innerHTML = "resize window"});
+			
+			document.getElementById("myDiv1").addEventListener("click",function(){ alert("You clicked the orange element!");},false);
+			document.getElementById("myP1").addEventListener("click",function(){alert("You clicked the white element!");},false);
+			document.getElementById("myDiv2").addEventListener("click",function(){alert("You clicked the orange element!");},true);
+			document.getElementById("myP2").addEventListener("click",function(){alert("You clicked the white element!");},true);
+			document.getElementById("myDiv").addEventListener("mousemove",myFunction);
+			function myFunction(){
+			  document.getElementById("demo3").innerHTML = Math.random();	
+			}
+			function removeHandler(){
+			  document.getElementById("myDiv").removeEventListener("mousemove",myFunction);
+			}
+		</script>
+	</body>
+</html>

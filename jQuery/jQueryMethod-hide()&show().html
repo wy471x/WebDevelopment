@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<p >Hello jQuery!</p>
+		<p >hide and show method</p>
+		<button id="show">Show</button>
+		<button id="hide">Hide</button>
+		<script>
+			$(document).ready(function(){
+				$("#hide").click(function(){
+					$("p").hide(1000);
+				});
+				
+				$("#show").click(function(){
+					$("p").show(1000);
+				});
+			});
+		</script>
+	</body>
+</html>

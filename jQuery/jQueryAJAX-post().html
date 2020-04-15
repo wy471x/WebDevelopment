@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ </head>
+ <body>
+  <button>send to data to server</button>
+  <script>
+    $(document).ready(function(){
+		$("button").click(function(){
+			$.post("demo_test_post.asp",
+					{
+						name: "Donald Duck",
+						city: "Duckburg"
+					},
+					function(data,status){
+						alert("Data: " + data + "\nStatus: " + status);
+					});
+		});
+	});
+  </script>
+ </body>
+</html>

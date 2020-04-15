@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ </head>
+ <body>
+  <button>Clike Me</button>
+  <p>Hello jQuery!</p>
+  <script>
+    $(document).ready(function(){
+		///* with callback function
+		$("button").click(function(){
+			$("p").hide("slow",function(){
+				alert("The paragraph is now hidden");
+			});
+		});
+		//*/
+		/*
+		$("button").click(function(){
+			$("p").hide("slow");
+			alert("The paragraph is now hidden");
+			});
+		});
+		*/
+	});
+  </script>
+ </body>
+</html>

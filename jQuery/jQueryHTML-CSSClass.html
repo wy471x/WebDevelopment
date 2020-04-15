@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <style>
+  .important {
+   font-weight: bold;
+   font-size: xx-large;
+  }
+
+  .blue {
+   color: blue;
+  }
+</style>
+ </head>
+ <body>
+    <h1>Hello javascript!</h1>
+	<h2>Hello jQuery!</h2>
+	<p>hello jQuery HTML!</p>
+	<div>This is some important text!</div>
+	<button>Click Me</button>
+  <script>
+	$(document).ready(function(){
+		/*addClas method (removeClass method)
+		$("button").click(function(){
+			$("h1,h2,p").addClass("blue");
+			$("div").addClass("important");
+		});
+		*/
+		/* toggleClass method
+		$("button").click(function(){
+			$("h1,h2,p").toggleClass("blue");
+			$("div").toggleClass("important");
+		});
+		*/
+		$("button").click(function(){
+			$("p").css({"background-color" : "yellow","font-size" : "200%"});
+		});
+		
+	});
+  </script>
+ </body>
+</html>

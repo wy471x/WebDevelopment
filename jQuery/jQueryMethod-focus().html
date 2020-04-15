@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<p>Hello jQuery!</p>
+		<p>focus method</p>
+		<input value="hello">
+		<script>
+			$(document).ready(function(){
+				$("input").focus(function(){
+					$(this).css("background-color","#000000");
+				});
+			});
+		</script>
+	</body>
+</html>

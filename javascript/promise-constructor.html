@@ -1,0 +1,39 @@
+<!DOCTYPE>
+<html>
+	<head>
+  		<meta charset='utf-8'>
+		<title>Promise Constructor</title>
+	</head>
+	<body>
+		<script>
+			/*let timeoutPromise = new Promise((resolve,reject) => {
+				    setTimeout(function(){
+   					 resolve('Success!');	
+					},2000);
+				});
+ 			timeoutPromise.then((message) => {	
+					alert(message);
+				})
+   			timeoutPromise.then(alert);
+		        */
+			function timeoutPromise(message,interval){
+			     		return new Promise((resolve,reject)=>{
+					    if(message === '' || typeof message !== 'string'){
+					        reject('Message is empty or not a string');	
+					     }else if( interval < 0 || typeof interval !== 'number'){
+					        reject('Interval is negative or not a number');	
+					     }else {
+					        setTimeout(function(){
+								 resolve(message);
+								},interval);	
+					     }
+					});
+				};
+			timeoutPromise('',-1000).then(message => { 
+						  alert(message);
+						}).catch(e => {
+						  console.log('Error: ' + e);
+						});
+ 		</script>
+	</body>
+</html>

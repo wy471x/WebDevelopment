@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>jQuery</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ </head>
+ <body>
+  <button>Start Animation</button>
+  <div style="background-color: #98bf21; height: 100px; width: 100px; position: absolute;"></div>
+  <script>
+    /*manipulate single property
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("div").animate({left: '250px'});
+		});
+	});
+	*/
+	/*manipulate multiply properties
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("div").animate({
+							  width: 'hide',
+							});
+		});
+	});
+	*/
+	/* use queue functionality
+	$(document).ready(function(){
+		$("button").click(function(){
+			var div = $("div");
+			div.animate({height: '300px',opacity: '0.5'},"slow");
+			div.animate({width: '300px',opacity: '0.8'},'slow');
+			div.animate({height: '100px',opacity: '0.4'},"slow");
+			div.animate({width: '100px', opacity: '0.8'},"slow");
+		});
+	});
+	*/
+	$(document).ready(function(){
+		$("button").click(function(){
+			var div = $("div");
+			div.animate({left: '100px'},"slow");
+			div.animate({fontSize: '3em'},'slow');
+		});
+	});
+  </script>
+ </body>
+</html>
